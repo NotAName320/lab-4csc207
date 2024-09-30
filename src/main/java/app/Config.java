@@ -4,6 +4,7 @@ import api.GradeDataBase;
 import api.MongoGradeDataBase;
 import usecase.FormTeamUseCase;
 import usecase.GetAverageGradeUseCase;
+import usecase.GetBottomGradeUseCase;
 import usecase.GetGradeUseCase;
 import usecase.GetTopGradeUseCase;
 import usecase.JoinTeamUseCase;
@@ -71,6 +72,14 @@ public class Config {
      */
     public GetTopGradeUseCase getTopGradeUseCase() {
         return new GetTopGradeUseCase(gradeDataBase);
+    }
+
+    /**
+     * Get the GetBottomGradeUseCase object.
+     * @return GetBottomGradeUseCase object.
+     */
+    public GetBottomGradeUseCase getBottomGradeUseCase() {
+        return new GetBottomGradeUseCase(gradeDataBase);
     }
 
 }
